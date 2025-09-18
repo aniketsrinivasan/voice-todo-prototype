@@ -1,5 +1,12 @@
 ### IMPLEMENTATION_GUIDE.md (backend-first)
 
+Docs index
+
+- Backend overview: `../README.md`
+- API reference and cURL examples: `api/README.md`
+- Database internals: `database/README.md`
+- Microservices (LLM, STT, Agent): `microservices/README.md`
+
 This guide explains how to implement the Python backend in `backend/` using FastAPI, Postgres, and agentic tooling. Follow the steps in order.
 
 ### 1) Prereqs and setup
@@ -189,16 +196,16 @@ pytest
 
 ### 13) Implementation checklist
 
-- [ ] Normalize folder name `backend/src/microservices/` (remove trailing space).
-- [ ] Add `engine.py`, `models.py`, `repositories.py`, Alembic setup in `database/`.
-- [ ] Fix `schemas.py` to pure Pydantic models; add all DTOs.
-- [ ] Implement `app.py` with CORS and routers.
-- [ ] Implement `api/tasks.py` and `api/ask.py`.
-- [ ] Implement `voice_model.py` transcription.
-- [ ] Implement `llm.py` with `parse_task`.
-- [ ] Implement `agent.py` with smolagents and tools in `agent_tools/`.
-- [ ] End-to-end `/add_task` (audio and JSON) happy path.
-- [ ] `/list_tasks`, `/complete`, `/ask` happy paths.
-- [ ] Error paths and minimal tests.
+- [x] Normalize folder name `backend/src/microservices/` (remove trailing space).
+- [x] Add `engine.py`, `models.py`, `repositories.py`, Alembic setup in `database/`.
+- [x] Fix `schemas.py` to pure Pydantic models; add all DTOs.
+- [x] Implement `app.py` with CORS and routers.
+- [x] Implement `api/tasks.py` and `api/ask.py`.
+- [x] Implement `voice_model.py` transcription.
+- [x] Implement `llm.py` with `parse_task`.
+- [x] Implement `agent.py` with smolagents and tools in `agent_tools/` (skeleton).
+- [x] End-to-end `/add_task` (audio and JSON) happy path.
+- [x] `/list_tasks`, `/complete`, `/ask` happy paths.
+- [x] Error paths and minimal tests (initial).
 
 - I provided a concise backend-first guide mapped to your current `backend/` structure, including endpoints, data model, modules to implement, and a step-by-step checklist.

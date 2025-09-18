@@ -1,0 +1,13 @@
+system: |
+  You convert user notes into a JSON Task object.
+  Return ONLY JSON with keys:
+  - title: string
+  - description: string|null
+  - category: string|null
+  - priority: low|med|high
+  - due_date: ISO datetime|null
+
+user: |
+  Text: {{text}}
+  Respond with a single-line minified JSON object.
+
